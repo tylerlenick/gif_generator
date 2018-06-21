@@ -80,16 +80,19 @@
       // Adding a click event listener to all elements with a class of "movie-btn"
       $(document).on("click", ".animal-btn", displayAnimalGifs);
 
-      $("img").on("click", function() {
+      $(document).on("click", ".animal-img", function() {
 
         console.log("it works");
         var state = $(this).attr("data-state");
 
         if (state === "still") {
-        $(this).attr("src", $(this).attr("data-animate"))
-
-        }
-
+        $(this).attr("src", $(this).attr("animate"));
+        $(this).attr("data-state", "animate");
+        
+        } else {
+        $(this).attr("src", $(this).attr("still"));
+        $(this).attr("data-state", "still");
+        } 
 
 
       });
