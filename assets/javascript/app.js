@@ -1,5 +1,5 @@
       // Initial array of movies
-      var animals = [];
+      var animals = ["lion", "tiger", "bear"];
 
       // displayMovieInfo function re-renders the HTML to display the appropriate content
       function displayAnimalGifs() {
@@ -7,7 +7,7 @@
         $("#animal-view").empty();
 
         var animal = $(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=PSGz1PJiAkf3KhGbNZhuetNSqqRzmIRN&q=" + animal + "&limit=9&offset=0&rating=G&lang=en"
+        var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=PSGz1PJiAkf3KhGbNZhuetNSqqRzmIRN&q=" + animal + "&limit=10&offset=0&rating=G&lang=en"
         var gifs = [];
 
         // Creating an AJAX call for the specific movie button being clicked
